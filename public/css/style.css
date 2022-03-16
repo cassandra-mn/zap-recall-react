@@ -5,17 +5,15 @@
 body {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid #DBDBDB;
     background-color: #FB6B6B;
     font-family: 'Roboto', sans-serif;
 }
 
-/************ TELA 1 ***************/
+/*************** TELA 1 ***************/
 
 .tela1 {
+    margin-top: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,4 +52,81 @@ body {
     line-height: 14px;
     text-align: center;
     color: #D70900;
+}
+
+/*************** TELA 2 ***************/
+
+.tela2 header {
+    top: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.tela2 img {
+    width: 26px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.tela2 h1 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.tela2 main {
+    width: calc(100vw - 1px);
+    height: calc(100vh - 100px);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela2 main .perguntas {
+    width: 182px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+}
+
+.tela2 main p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.tela2 main img {
+    width: 13px;
+    height: 13px;
+}
+
+.tela2 footer {
+    width: 100vw;
+    height: 50px;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tela2 footer p {
+    width: 97px;
+    height: 14px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
 }
