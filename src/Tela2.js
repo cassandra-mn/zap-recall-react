@@ -1,4 +1,4 @@
-const perguntas = [
+const flashcards = [
     { pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript" },
     { pergunta: "O React é __", resposta: "uma biblioteca JavaScript para construção de interfaces" },
     { pergunta: "Componentes devem iniciar com __", resposta: "letra maiúscula" },
@@ -9,8 +9,6 @@ const perguntas = [
     { pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
 ];
 
-console.log(perguntas.length);
-
 export default function Tela2() {
     return (
         <div class="tela2">
@@ -19,7 +17,7 @@ export default function Tela2() {
                 <h1>ZapRecall</h1>
             </header>
             <main>
-                {perguntas.map((pergunta, index) =>
+                {flashcards.map((card, index) =>
                     <Perguntas index={index+1} />    
                 )}
             </main>

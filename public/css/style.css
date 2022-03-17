@@ -1,3 +1,5 @@
+/*************** GERAL ***************/
+
 * {
     box-sizing: border-box;
 }
@@ -10,12 +12,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.escondido {
+    display: none;
+}
+
 /*************** TELA 1 ***************/
 
 .tela1 {
-    margin-top: 50%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -52,6 +60,12 @@ body {
     line-height: 14px;
     text-align: center;
     color: #D70900;
+}
+
+.tela1 button:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
 }
 
 /*************** TELA 2 ***************/
@@ -98,6 +112,12 @@ body {
     border-radius: 5px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     background: #FFFFFF;
+}
+
+.tela2 main .perguntas:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
 }
 
 .tela2 main p {
