@@ -1,12 +1,12 @@
 import React from "react";
-import Tela2 from "./Tela2";
+import TelaPerguntas from "./TelaPerguntas";
 
-export default function Tela1() {
+export default function TelaInicial() {
     const [visivel, setVisivel] = React.useState(true);
 
     if (visivel) {
         return (
-            <div className="tela1">
+            <div className="telaInicial">
                 <div className="container">
                     <img src="assets/image 1.png" alt="raio" />
                    <h1>ZapRecall</h1> 
@@ -15,5 +15,5 @@ export default function Tela1() {
             </div>
         );
     }
-    return <><Tela2 /></>
+    return <><TelaPerguntas /></>
 }
