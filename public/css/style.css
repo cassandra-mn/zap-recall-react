@@ -101,25 +101,6 @@ body {
     align-items: center;
 }
 
-.telaPerguntas main .perguntas {
-    width: 182px;
-    height: 40px;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    background: #FFFFFF;
-}
-
-.telaPerguntas main .perguntas:hover {
-    cursor: pointer;
-    background-color: whitesmoke;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
-}
-
 .telaPerguntas main p {
     font-size: 12px;
     line-height: 14px;
@@ -149,4 +130,46 @@ body {
     font-size: 12px;
     line-height: 14px;
     color: #333333;
+}
+
+/* FLASHCARDS */
+
+.perguntas {
+    width: 182px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+}
+
+.perguntas:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* DECKS */
+
+.pergunta-flash {
+    width: 182px;
+    height: 80px;   
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    position: relative;
+    background: #FFFFD5;
+}
+
+.pergunta-flash img {
+    bottom: 5px;
+    right: 2px;
+    width: 25px;
+    height: 18px;
+    position: absolute;
 }

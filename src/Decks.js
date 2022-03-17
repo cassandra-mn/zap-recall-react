@@ -11,8 +11,9 @@ const flashcards = [
 
 export default function Decks(props) {
     return (
-        <div className="perguntas">
+        <div className="pergunta-flash">
             <p>{flashcards[props.index].pergunta}</p>
+            <img src="/assets/Vector.svg"></img>
         </div>
     );
 }
