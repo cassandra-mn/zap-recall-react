@@ -14,9 +14,9 @@ export default function FlashCards(props) {
             <div className="cards">
                 <p>{flashcards[index].resposta}</p>
                 <div className="caixinhas">
-                    <div className="caixinha vermelha" onClick={mudarEstado}><p>Não lembrei</p></div>
-                    <div className="caixinha laranja" onClick={mudarEstado}><p>Quase não lembrei</p></div>
-                    <div className="caixinha verde" onClick={mudarEstado}><p>Zap!</p></div>
+                    <div className="caixinha vermelha" onClick={() => mudarEstado("incorreto")}><p>Não lembrei</p></div>
+                    <div className="caixinha laranja" onClick={() => mudarEstado("meio-termo")}><p>Quase não lembrei</p></div>
+                    <div className="caixinha verde" onClick={() => mudarEstado("correto")}><p>Zap!</p></div>
                 </div>
             </div>
         );

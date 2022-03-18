@@ -220,3 +220,18 @@ body {
     justify-content: center;
     color: #FFFFFF;
 }
+
+.perguntas .correto {
+    color: #2FBE34;
+    text-decoration-line: line-through;
+}
+
+.perguntas .meio-termo {
+    color: #FF922E;
+    text-decoration-line: line-through;
+}
+
+.perguntas .incorreto {
+    color: #FF3030;
+    text-decoration-line: line-through;
+}
