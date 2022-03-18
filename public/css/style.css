@@ -193,6 +193,10 @@ body {
     justify-content: center;
 }
 
+.caixinhas .caixinha:hover {
+    cursor: pointer;
+}
+
 .caixinha.vermelha {
     background: #FF3030;
     margin-right: 5px;

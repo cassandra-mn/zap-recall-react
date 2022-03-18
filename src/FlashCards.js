@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function FlashCards(props) {
-    const { flashcards, index } = props;
+    const {flashcards, index, mudarEstado} = props;
     const [virada, setVirada] = React.useState(true);
 
     return virada ? (
@@ -14,9 +14,9 @@ export default function FlashCards(props) {
             <div className="cards">
                 <p>{flashcards[index].resposta}</p>
                 <div className="caixinhas">
-                    <div className="caixinha vermelha"><p>Não lembrei</p></div>
-                    <div className="caixinha laranja"><p>Quase não lembrei</p></div>
-                    <div className="caixinha verde"><p>Zap!</p></div>
+                    <div className="caixinha vermelha" onClick={mudarEstado}><p>Não lembrei</p></div>
+                    <div className="caixinha laranja" onClick={mudarEstado}><p>Quase não lembrei</p></div>
+                    <div className="caixinha verde" onClick={mudarEstado}><p>Zap!</p></div>
                 </div>
             </div>
         );
