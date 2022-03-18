@@ -155,9 +155,9 @@ body {
 
 /*************** FLASHCARDS ***************/
 
-.pergunta-flash {
+.cards {
     width: 182px;
-    height: 80px;   
+    min-height: 80px;   
     padding: 10px;
     margin-bottom: 14px;
     border-radius: 5px;
@@ -166,7 +166,7 @@ body {
     background: #FFFFD5;
 }
 
-.pergunta-flash img {
+.cards img {
     bottom: 5px;
     right: 2px;
     min-width: 20px;
@@ -174,6 +174,45 @@ body {
     position: absolute;
 }
 
-.pergunta-flash img:hover {
+.cards img:hover {
     cursor: pointer;
+}
+
+.cards .caixinhas {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.caixinhas .caixinha {
+    width: 55px;
+    height: 24px;
+    margin-top: 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixinha.vermelha {
+    background: #FF3030;
+    margin-right: 5px;
+}
+
+.caixinha.laranja {
+    background: #FF922E;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.caixinha.verde {
+    background: #2FBE34;
+}
+
+.caixinhas .caixinha p {
+    font-size: 7px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
 }
