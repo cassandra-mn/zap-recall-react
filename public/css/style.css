@@ -235,3 +235,14 @@ body {
     color: #FF3030;
     text-decoration-line: line-through;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .emojis img {
+    width: 14px;
+    height: 14px;   
+    margin: 2px;
+}

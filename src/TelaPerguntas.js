@@ -13,20 +13,26 @@ export default function TelaPerguntas() {
         { pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
     ];
     const [concluidos, setConcluidos] = React.useState(0);
-    
+    const [emojis, setEmojis] = React.useState([]);
+
     return (
         <div className="telaPerguntas">
             <header>
-                <img src="assets/image 1.png" alt="raio" />
+                <img src="assets/raio.png" alt="raio" />
                 <h1>ZapRecall</h1>
             </header>
             <main>
                 {flashcards.map((card, index) =>
-                    <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} />    
+                    <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} />    
                 )}
             </main>
             <footer>
                 <p>{concluidos}/8 CONCLUÍDOS</p>
+                <div className="emojis">
+                    {emojis.map((emoji, index) => {
+                        return <img key={index} src={emoji} alt={emoji} />
+                    })}
+                </div>
             </footer>
         </div>
     );

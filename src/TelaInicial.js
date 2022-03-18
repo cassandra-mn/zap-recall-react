@@ -8,7 +8,7 @@ export default function TelaInicial() {
         return (
             <div className="telaInicial">
                 <div className="container">
-                    <img src="assets/image 1.png" alt="raio" />
+                    <img src="assets/raio.png" alt="raio" />
                    <h1>ZapRecall</h1> 
                 </div>
                 <button onClick={() => setVisivel(false)}><p>Iniciar Recall!</p></button>
