@@ -1,4 +1,4 @@
-import FlashCards from "./FlashCards";
+import Decks from "./Decks";
 
 const flashcards = [
     { pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript" },
@@ -20,7 +20,7 @@ export default function TelaPerguntas() {
             </header>
             <main>
                 {flashcards.map((card, index) =>
-                    <FlashCards index={index+1} />    
+                    <Decks index={index} flashcards={flashcards} />    
                 )}
             </main>
             <footer>

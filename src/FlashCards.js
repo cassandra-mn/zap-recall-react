@@ -1,21 +1,10 @@
-import React from "react";
-import Decks from "./Decks";
-
-let i = null;
-
 export default function FlashCards(props) {
-    const [esconder, setEsconder] = React.useState(true);
+    const { flashcards, index } = props;
 
-    if (esconder) {
-        return (
-            <div className="perguntas" onClick={() => { 
-                    setEsconder(false);
-                    i = props.index - 1;
-                }}>
-                <p><strong>Pergunta {props.index}</strong></p>
-                <img src="assets/vetor.svg" />
-            </div>
-        );
-    }
-    return <Decks index={i} />;
+    return (
+        <div className="pergunta-flash">
+            <p>{flashcards[index].pergunta}</p>
+            <img src="/assets/Vector.svg"></img>
+        </div>
+    );
 }
