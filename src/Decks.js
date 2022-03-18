@@ -2,7 +2,7 @@ import React from "react";
 import FlashCards from "./FlashCards";
 
 export default function Decks(props) {
-    const { flashcards, index } = props;
+    const {flashcards, index, concluidos} = props;
     const [esconder, setEsconder] = React.useState(true);
     const [classe, setClasse] = React.useState("");
     const [emoji, setEmoji] = React.useState("assets/vetor.svg");
@@ -13,10 +13,11 @@ export default function Decks(props) {
         if (status === "correto") setEmoji("assets/correto.svg");
         if (status === "incorreto") setEmoji("assets/incorreto.svg");
         if (status === "meio-termo") setEmoji("assets/meio-termo.svg");
+        concluidos(1);
     }
 
     return esconder ?
-        (<div className="perguntas" onClick={mudarEstado}>
+        (<div className="perguntas" onClick={() => setEsconder(false)}>
             <p className={classe}><strong>Pergunta {props.index+1}</strong></p>
             <img src={emoji} alt={classe}/>
         </div>)
