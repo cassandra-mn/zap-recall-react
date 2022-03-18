@@ -132,7 +132,7 @@ body {
     color: #333333;
 }
 
-/* FLASHCARDS */
+/*************** Decks ***************/
 
 .perguntas {
     width: 182px;
@@ -153,7 +153,7 @@ body {
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* DECKS */
+/*************** FLASHCARDS ***************/
 
 .pergunta-flash {
     width: 182px;
@@ -169,7 +169,11 @@ body {
 .pergunta-flash img {
     bottom: 5px;
     right: 2px;
-    width: 25px;
-    height: 18px;
+    min-width: 20px;
+    min-height: 13px;
     position: absolute;
+}
+
+.pergunta-flash img:hover {
+    cursor: pointer;
 }
