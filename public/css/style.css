@@ -62,7 +62,7 @@ body {
     color: #D70900;
 }
 
-.telaInicial button:hover {
+button:hover {
     cursor: pointer;
     background-color: whitesmoke;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
@@ -250,7 +250,7 @@ footer .emojis img {
 
 footer.parte-final {
     width: 100vw;
-    min-height: 112px;
+    min-height: 145px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
     background: #FFFFFF;
 }
@@ -278,4 +278,25 @@ footer.parte-final p {
     line-height: 14px;
     font-weight: bold;
     color: #333333;
+}
+
+.parte-final button {
+    width: 125px;
+    height: 24px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #FB6B6B;
+}
+
+.parte-final button p {
+    width: 100px;
+    height: 24px;
+    margin: 0 auto;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
 }
