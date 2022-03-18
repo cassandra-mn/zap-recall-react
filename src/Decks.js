@@ -2,7 +2,7 @@ import React from "react";
 import FlashCards from "./FlashCards";
 
 export default function Decks(props) {
-    const {flashcards, index, concluidos, emojis} = props;
+    const {flashcards, index, concluidos, emojis, incorretas} = props;
     const [esconder, setEsconder] = React.useState(true);
     const [classe, setClasse] = React.useState("");
     const [resposta, setResposta] = React.useState("assets/vetor.svg");
@@ -10,13 +10,14 @@ export default function Decks(props) {
     function mudarEstado(status) {
         setEsconder(!esconder);
         setClasse(status);
-        if (status === "correto") {
-            setResposta("assets/correto.svg");
-            emojis("assets/correto.svg");
-        }
         if (status === "incorreto") {
             setResposta("assets/incorreto.svg");
             emojis("assets/incorreto.svg");
+            incorretas(1);
+        }
+        if (status === "correto") {
+            setResposta("assets/correto.svg");
+            emojis("assets/correto.svg");
         }
         if (status === "meio-termo") {
             setResposta("assets/meio-termo.svg");

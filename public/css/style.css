@@ -238,6 +238,7 @@ body {
 
 footer {
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -245,4 +246,36 @@ footer .emojis img {
     width: 14px;
     height: 14px;   
     margin: 2px;
+}
+
+footer.parte-final {
+    width: 100vw;
+    min-height: 112px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+}
+
+footer.parte-final p {
+    width: 150px;
+    height: 28px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.parte-final .alinhar {
+    display: flex;
+    align-items: center;
+}
+
+.parte-final .alinhar img {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 2px;
+}
+
+.parte-final .alinhar h1 {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    color: #333333;
 }

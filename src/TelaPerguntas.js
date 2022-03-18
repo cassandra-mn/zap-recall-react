@@ -14,8 +14,32 @@ export default function TelaPerguntas() {
     ];
     const [concluidos, setConcluidos] = React.useState(0);
     const [emojis, setEmojis] = React.useState([]);
+    const [incorretas, setIncorretas] = React.useState(0);
+    const imgFinal = incorretas === 0 ? "assets/party.svg" : "assets/sad.svg";
+    const h1Final = incorretas === 0 ? "PARABÉNS!" : "PUTZ!";
+    const pFinal = incorretas === 0 ? "Você não esqueceu de nenhum flashcard!" : "Ainda faltaram alguns... Mas não desanime!";
 
-    return (
+    return concluidos < flashcards.length ? (
+        <div className="telaPerguntas">
+            <header>
+                <img src="assets/raio.png" alt="raio" />
+                <h1>ZapRecall</h1>
+            </header>
+            <main>
+                {flashcards.map((card, index) =>
+                    <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} incorretas={quantidade => setIncorretas(incorretas+quantidade)} />    
+                )}
+            </main>
+            <footer>
+                <p>{concluidos}/8 CONCLUÍDOS</p>
+                <div className="emojis">
+                    {emojis.map((emoji, index) => {
+                        return <img key={index} src={emoji} alt={emoji} />
+                    })}
+                </div>
+            </footer>
+        </div>
+    ) : (
         <div className="telaPerguntas">
             <header>
                 <img src="assets/raio.png" alt="raio" />
@@ -26,8 +50,12 @@ export default function TelaPerguntas() {
                     <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} />    
                 )}
             </main>
-            <footer>
-                <p>{concluidos}/8 CONCLUÍDOS</p>
+            <footer className="parte-final">
+                <div className="alinhar">
+                    <img src={imgFinal} alt="party" />
+                    <h1>{h1Final}</h1>
+                </div>
+                <p>{pFinal}</p>
                 <div className="emojis">
                     {emojis.map((emoji, index) => {
                         return <img key={index} src={emoji} alt={emoji} />
