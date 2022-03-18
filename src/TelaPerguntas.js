@@ -19,6 +19,16 @@ export default function TelaPerguntas() {
     const h1Final = incorretas === 0 ? "PARABÉNS!" : "PUTZ!";
     const pFinal = incorretas === 0 ? "Você não esqueceu de nenhum flashcard!" : "Ainda faltaram alguns... Mas não desanime!";
 
+    function embaralhar(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i+1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const flashcardsEmbaralhados = embaralhar(flashcards);
+
     return concluidos < flashcards.length ? (
         <div className="telaPerguntas">
             <header>
@@ -26,8 +36,8 @@ export default function TelaPerguntas() {
                 <h1>ZapRecall</h1>
             </header>
             <main>
-                {flashcards.map((card, index) =>
-                    <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} incorretas={quantidade => setIncorretas(incorretas+quantidade)} />    
+                {flashcardsEmbaralhados.map((card, index) =>
+                    <Decks key={index} index={index} flashcards={flashcardsEmbaralhados} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} incorretas={quantidade => setIncorretas(incorretas+quantidade)} />    
                 )}
             </main>
             <footer>
@@ -47,7 +57,7 @@ export default function TelaPerguntas() {
             </header>
             <main>
                 {flashcards.map((card, index) =>
-                    <Decks key={index} index={index} flashcards={flashcards} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} />    
+                    <Decks key={index} index={index} flashcards={flashcardsEmbaralhados} concluidos={valor => setConcluidos(concluidos+valor)} emojis={resposta => setEmojis([...emojis, resposta])} />    
                 )}
             </main>
             <footer className="parte-final">
