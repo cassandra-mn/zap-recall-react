@@ -1,5 +1,6 @@
 import React from "react";
 import TelaPerguntas from "./TelaPerguntas";
+import raio from "./../assets/raio.png";
 
 export default function TelaInicial() {
     const react = [
@@ -31,7 +32,7 @@ export default function TelaInicial() {
         return (
             <div className="telaInicial">
                 <div className="container">
-                    <img src="assets/raio.png" alt="raio" />
+                    <img src={raio} alt="raio" />
                     <h1>ZapRecall</h1>
                 </div>
                 <select onClick={e => setSelecionar(e.target.value)}>

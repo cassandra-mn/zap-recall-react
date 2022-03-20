@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;700&family=Righteous&display=swap');
+
 /*************** GERAL ***************/
 
 * {
     box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
 }
 
 body {
     width: 100vw;
     height: 100vh;
+    margin: 0;
     border: 1px solid #DBDBDB;
     background-color: #FB6B6B;
-    font-family: 'Roboto', sans-serif;
 }
 
 .escondido {
@@ -29,7 +32,7 @@ body {
 }
 
 .telaInicial .container {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .telaInicial .container img {
@@ -44,6 +47,7 @@ body {
     font-size: 25px;
     line-height: 31px;
     color: #FFFFFF;
+    font-family: 'Righteous';
 }
 
 .telaInicial button {
@@ -112,10 +116,11 @@ button.desabilitado:hover {
     font-size: 20px;
     line-height: 25px;
     color: #FFFFFF;
+    font-family: 'Righteous';
 }
 
 .telaPerguntas main {
-    width: calc(100vw - 1px);
+    width: 100vw;
     height: calc(100vh - 100px);
     margin-top: 50px;
     display: flex;
@@ -153,6 +158,7 @@ button.desabilitado:hover {
     font-size: 12px;
     line-height: 14px;
     color: #333333;
+    font-family: 'Recursive', sans-serif;
 }
 
 /*************** Decks ***************/

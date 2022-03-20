@@ -1,4 +1,5 @@
 import React from "react";
+import virar from "./../assets/virar.png";
 
 export default function FlashCards(props) {
     const {flashcards, index, mudarEstado} = props;
@@ -7,7 +8,7 @@ export default function FlashCards(props) {
     return virada ? 
         (<div className="cards">
             <p>{flashcards[index].pergunta}</p>
-            <img src="/assets/Vector.svg" onClick={() => setVirada(!virada)} alt="seta" />
+            <img src={virar} onClick={() => setVirada(!virada)} alt="seta" />
         </div>) : 
         (<div className="cards">
             <p>{flashcards[index].resposta}</p>

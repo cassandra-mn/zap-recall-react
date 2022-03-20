@@ -1,6 +1,9 @@
 import {useState} from "react";
 import Decks from "./Decks";
 import TelaInicial from "./TelaInicial";
+import raio from "./../assets/raio.png";
+import party from "./../assets/party.png";
+import sad from "./../assets/sad.png";
 
 export default function TelaPerguntas(props) {
     const {flashcards} = props;
@@ -8,7 +11,7 @@ export default function TelaPerguntas(props) {
     const [emojis, setEmojis] = useState([]);
     const [incorretas, setIncorretas] = useState(0);
     const [visivel, setVisivel] = useState(true);
-    const imgFinal = incorretas === 0 ? "assets/party.svg" : "assets/sad.svg";
+    const imgFinal = incorretas === 0 ? party : sad;
     const h1Final = incorretas === 0 ? "PARABÉNS!" : "PUTZ!";
     const pFinal = incorretas === 0 ? "Você não esqueceu de nenhum flashcard!" : "Ainda faltaram alguns... Mas não desanime!";
     const flashcardsEmbaralhados = embaralhar(flashcards);
@@ -25,7 +28,7 @@ export default function TelaPerguntas(props) {
         return concluidos < flashcards.length ? (
             <div className="telaPerguntas">
                 <header>
-                    <img src="assets/raio.png" alt="raio" />
+                    <img src={raio} alt="raio" />
                     <h1>ZapRecall</h1>
                 </header>
                 <main>
@@ -45,7 +48,7 @@ export default function TelaPerguntas(props) {
         ) : (
             <div className="telaPerguntas">
                 <header>
-                    <img src="assets/raio.png" alt="raio" />
+                    <img src={raio} alt="raio" />
                     <h1>ZapRecall</h1>
                 </header>
                 <main>
