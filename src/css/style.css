@@ -45,7 +45,6 @@ body {
     width: 152px;
     height: 35px;
     font-size: 25px;
-    line-height: 31px;
     color: #FFFFFF;
     font-family: 'Righteous';
 }
@@ -61,7 +60,6 @@ body {
 
 .telaInicial button p {
     font-size: 12px;
-    line-height: 14px;
     text-align: center;
     color: #D70900;
 }
@@ -114,7 +112,6 @@ button.desabilitado:hover {
 
 .telaPerguntas h1 {
     font-size: 20px;
-    line-height: 25px;
     color: #FFFFFF;
     font-family: 'Righteous';
 }
@@ -131,7 +128,6 @@ button.desabilitado:hover {
 
 .telaPerguntas main p {
     font-size: 12px;
-    line-height: 14px;
     color: #333333;
 }
 
@@ -156,7 +152,6 @@ button.desabilitado:hover {
     width: 97px;
     height: 14px;
     font-size: 12px;
-    line-height: 14px;
     color: #333333;
     font-family: 'Recursive', sans-serif;
 }
@@ -243,7 +238,6 @@ button.desabilitado:hover {
 
 .caixinhas .caixinha p {
     font-size: 7px;
-    line-height: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,7 +298,6 @@ footer.parte-final p {
 
 .parte-final .alinhar h1 {
     font-size: 12px;
-    line-height: 14px;
     font-weight: bold;
     color: #333333;
 }
@@ -323,9 +316,143 @@ footer.parte-final p {
     height: 24px;
     margin: 0 auto;
     font-size: 10px;
-    line-height: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
+}
+
+@media (min-width: 700px) {
+    .telaInicial .container img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .telaInicial .container h1 {
+        width: 300px;
+        font-size: 40px;
+    }
+
+    .telaInicial select {
+        width: 250px;
+        height: 50px;
+    }
+    
+    .telaInicial select {
+        font-size: 14px;
+    }
+
+    .telaInicial button {
+        width: 250px;
+        height: 50px;
+    }
+
+    .telaInicial button p {
+        font-size: 17px;
+    }
+
+    .telaPerguntas img {
+        width: 40px;
+        height: 46px;
+    }
+
+    .telaPerguntas h1 {
+        font-size: 32px;
+    }
+
+    .telaPerguntas .perguntas {
+        width: 340px;
+        height: 55px;
+    }
+    
+    .telaPerguntas .perguntas p {
+        font-size: 17px;
+    }
+    
+    .telaPerguntas .perguntas img {
+        width: 19px;
+        height: 22px;
+    }
+    
+    .telaPerguntas footer p {
+        width: 153px;
+        font-size: 19px;
+    }
+
+    .telaPerguntas .cards {
+        width: 340px;
+        height: 100px;
+    }
+    
+    .telaPerguntas .cards p {
+        font-size: 15px;
+    }
+    
+    .telaPerguntas .cards img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cards .caixinhas {
+        height: 50px;
+        justify-content: space-evenly;
+    }
+
+    .cards .caixinhas .caixinha {
+        width: 100px;
+        height: 35px;
+    }
+
+    .cards .caixinhas .caixinha p {
+        font-size: 12px;
+    }   
+
+    .telaPerguntas footer {
+        height: 70px;
+    }
+
+    .telaPerguntas footer p {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .telaPerguntas footer img {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer.parte-final {
+        height: 200px;
+    }
+
+    footer.parte-final .alinhar img {
+        width: 24px;
+        height: 24px;
+    }
+
+    footer.parte-final .alinhar h1 {
+        font-size: 17px;
+    }
+    
+    footer.parte-final p {
+        width: 250px;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+
+    footer.parte-final .emojis img {
+        width: 18px;
+        height: 18px;
+    }
+
+    footer.parte-final button {
+        width: 180px;
+        height: 45px;
+    }
+
+    footer.parte-final button p {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
 }
